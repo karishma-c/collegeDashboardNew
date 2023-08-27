@@ -1,0 +1,84 @@
+@import './../../styles/variables.css';
+
+.chartContainer {
+    width: 790px;
+    padding: 10px 15px;
+}
+.lineChart {
+    max-height: 300px;
+}
+.chartContainerHeader {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.chartHeading {
+    font-size: var(--font-medium);
+    font-weight: var(--font-weight-semibold);
+    margin: 10px;
+    padding: 0;
+    color: var(--text-color);
+}
+.admissionButton {
+    cursor: pointer;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    border-radius: var(--button-border-radius);
+    border: 1px solid var(--secondary-color);
+    font-size: var(--font-small-xs);
+    padding: 5px 12px;
+    margin: 0 20px 0 0;
+    background-color: var(--white-color);
+    color: var(--text-color);
+}
+.admissionButton:hover {
+    background-color: var(--hover-color-1);
+}
+#admissionRateIcon {
+    padding: 0 0 0 8px;
+}
+   
+@media (max-width:1040px) {
+    
+    .chartContainer {
+        width: 550px;
+        padding: 10px;
+    }
+
+}
+
+@media (max-width:900px) {
+    
+    .chartContainer {
+        width: 350px;
+        padding: 10px;
+    }
+    .chartHeading {
+        font-size: var(--font-small);
+        margin: 10px 0;
+    }
+    .admissionButton {
+        font-size: var(--font-size-xs);
+        padding: 4px 8px;
+        margin: 0;
+    }
+    #admissionRateIcon {
+        padding: 0 0 0 8px;
+    }
+
+}
+
+@media (max-width:780px) {
+    .chartContainer {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .chartContainer {
+        display: none;
+    }
+}

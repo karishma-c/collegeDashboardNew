@@ -1,0 +1,188 @@
+@import './../../styles/variables.css';
+
+.watchlistContainer {
+    background-color: var(--white-color);
+    width: 350px;
+    height: 92vh;
+    margin: 10px;
+    overflow-y: scroll;
+}
+.watchlistContainerHeader {
+    font-size: var(--font-medium);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-color);
+    margin: 15px 10px 10px;
+    padding: 0;
+}
+.cardContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.watchlistCard {
+    cursor: pointer;
+    width: 280px;
+    height: 280px;
+    background-color: var(--white-color);
+    border-radius: var(--card-border-radius);
+    border: 1px solid var(--border-color);
+    margin: 5px 15px;
+    padding: 20px 15px;
+}
+.watchlistCard:first-child {
+    margin-top: 10px;
+}
+.watchlistCard:hover {
+    box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, .1);;
+}
+#watchlistBin {
+    opacity: 0;
+}
+.watchlistCard:hover  #watchlistBin {
+    opacity: 1;
+}
+.cardHeader, .admitted {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.collegeName, .satHeading, .actHeading, .achievementsHeading {
+    font-size: var(--font-small);
+    font-weight: var(--font-weight-semibold);
+    margin: 0;
+    padding: 0 0 5px 0;
+    color: var(--text-color);
+}
+.satHeading, .actHeading, .achievementsHeading {
+    font-weight: var(--font-weight-medium);
+    padding: 0 0 5px 0;
+}
+.city, .satValue, .actValue, .majorsValue, .achievementsValue {
+    font-size: var(--font-small-xs);
+    font-weight: var(--font-weight-normal);
+    color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+}
+.majors {
+    margin: 10px 0;
+}
+.majorsValue, .admitted {
+    border-radius: var(--tag-border-radius);
+    padding: 5px 10px;
+}
+.majorsValue {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    margin: 0 10px 0 0;
+}
+.majorsValue, .achievementsValue {
+    font-size: var(--font-size-xs);
+}
+.achievementsValue {
+    border: 1px solid var(--border-color);
+    border-radius: var(--card-border-radius);
+    padding: 5px 10px;
+    margin: 0 8px 5px 0;
+}
+.majors, .achievements {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.sat, .act {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.satDetails, .actDetails, .specialization {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 0 10px 0;
+}
+.admitted {
+    
+    padding: 2px 6px;
+}
+.dotDiv {
+    width: 8px;
+    height: 8px;
+    margin: 0 8px 0 0;
+    background-color: var(--primary-color);
+    border-radius: var(--button-border-radius);
+}
+.admittedValue {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-normal);
+    color: var(--primary-color);
+    margin: 0;
+}
+#tickIcon {
+    padding: 0 5px 0 0;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--border-color); 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color); 
+}
+
+@media (max-width:780px) {
+    
+    .watchlistContainer {
+        width: 300px;
+        padding: 10px;
+        height: 94vh;
+    }
+    .watchlistCard {
+        width: 240px;
+        height: 230px;
+        margin: 0 0 10px 0;
+    }
+    .satHeading, .actHeading, .achievementsHeading {
+        font-size: var(--font-small-xs);
+    }
+    .city, .satValue, .actValue, .majorsValue, .achievementsValue {
+        font-size: var(--font-size-xs);
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    
+    .watchlistContainer {
+        width: 300px;
+        overflow-x: scroll;
+        height: 100%;
+        padding: 10px 0 10px 10px;
+    }
+    .watchlistContainerHeader {
+        margin: 0;
+    }
+    .cardContainer {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .watchlistCard {
+        width: 300px !important;
+        height: 260px;
+        margin: 0 0 10px 0;
+        padding: 10px 15px;
+    }
+}
